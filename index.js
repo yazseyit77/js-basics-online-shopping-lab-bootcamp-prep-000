@@ -11,8 +11,11 @@ function setCart(c) {
 
 function addToCart(item) {
  // write your code here
- cart.push(itemName = "");
- return `${itemName} has been added to your cart.`
+ if(item !== undefined){
+ cart.push({[item]: Math.floor(Math.random() * 100) });
+ console.log(`${item} has been added to your cart.`);
+ return cart;
+}
 }
 
 function viewCart() {
